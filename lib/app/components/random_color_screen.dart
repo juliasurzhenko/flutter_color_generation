@@ -13,16 +13,18 @@ class RandomColorScreen extends StatefulWidget {
 /// State for RandomColorScreen.
 class _RandomColorScreenState extends State<RandomColorScreen> {
   Color _backgroundColor = Colors.white;
+  static const _maxColorValue = 256;
+  static const _maxOpacity = 255;
 
   void _changeColor() {
     final random = Random();
     
     setState(() {
       _backgroundColor = Color.fromARGB(
-        255,
-        random.nextInt(256),
-        random.nextInt(256),
-        random.nextInt(256),
+        _maxOpacity,
+        random.nextInt(_maxColorValue),
+        random.nextInt(_maxColorValue),
+        random.nextInt(_maxColorValue),
       );
     });
   }

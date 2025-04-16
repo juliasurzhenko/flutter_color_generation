@@ -1,3 +1,4 @@
+// ignore_for_file: prefer_match_file_name
 import 'package:flutter/material.dart';
 import 'package:flutter_color_generation/app/components/random_color_screen.dart';
 
